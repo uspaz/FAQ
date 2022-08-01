@@ -116,17 +116,22 @@ body {
           width: 70%;
           animation-name: fadeInUp;
           animation-duration: 1s; }
-        .container .container__faq .faq__image .image--overflow .image--ills .image--bg img {
-          width: 70%;
-          top: 0;
-          left: 3.2rem; }
+        .container .container__faq .faq__image .image--overflow .image--ills .image--bg {
+          height: 110px;
+          background-image: url("../images/bg-pattern-mobile.svg");
+          background-repeat: no-repeat;
+          background-position: 50% 0%;
+          animation-name: fadeInUp;
+          animation-duration: 1s; }
+          .container .container__faq .faq__image .image--overflow .image--ills .image--bg img {
+            display: none; }
       .container .container__faq .faq__image .image--box {
         display: none; }
     .container .container__faq .faq__content {
       width: 100%;
       padding: 0; }
       .container .container__faq .faq__content .content--title {
-        margin-top: 8.5rem;
+        margin-top: 2.5rem;
         text-align: center; }
       .container .container__faq .faq__content .content__question {
         width: 90%;

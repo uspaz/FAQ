@@ -167,10 +167,14 @@ body{
               animation-duration: 1s;
             }
             .image--bg{
+              height: 110px;
+              background-image: url("../images/bg-pattern-mobile.svg");
+              background-repeat: no-repeat;
+              background-position: 50% 0%;
+              animation-name: fadeInUp;
+              animation-duration: 1s;
               img{
-                width: 70%;
-                top: 0;
-                left: 3.2rem;
+                display: none;
               }
             }
           }
@@ -184,7 +188,7 @@ body{
         padding: 0;
         
         .content--title{
-          margin-top: 8.5rem;
+          margin-top: 2.5rem;
           text-align: center;
         }
         .content__question{
