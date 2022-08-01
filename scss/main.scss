@@ -1,0 +1,203 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+  // Colors
+$bg-gradient-fs: hsl(273, 75%, 66%);
+$bg-gradient-sc: hsl(240, 73%, 65%);
+$text-fs: hsl(238, 29%, 16%);
+$text-sc: hsl(14, 88%, 65%);
+$dividers: hsl(240, 5%, 91%);
+
+  // Font
+$fs-text: .875rem;
+
+  // Reset
+body{
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+  // Styles
+.container{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, $bg-gradient-fs, $bg-gradient-sc);
+  .container__faq{
+    width: 62.5rem;
+    height: 35rem;
+    display: flex;
+    border-radius: 1.875rem;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px .625rem .9375rem .625rem rgba(0, 0, 0, .3);
+    .faq__image{
+      width: 50%;
+      position: relative;
+      .image--overflow{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        img{
+          width: 100%;
+          position: absolute;
+          left: -4.5rem;
+          top: 15%;
+          &::selection{
+            color: transparent;
+            background-color: transparent;
+          }
+        }
+        .image--ills{
+          img{
+            z-index: 1;
+            animation-name: fadeInUp;
+            animation-duration: 1s;
+          }
+          .image--bg{
+            img{
+              width: 200%;
+              top: -45%;
+              left: -120%;
+              z-index: 0;
+            }
+          }
+        }
+      }
+      .image--box{
+        width: 12.5rem;
+        position: absolute;
+        top: 38%;
+        left: -20%;
+        z-index: 10;
+        animation-name: fadeInUp;
+        animation-duration: 1s;
+        &::selection{
+          color: transparent;
+          background-color: transparent;
+        }
+      }
+      
+    }
+    .faq__content{
+      width: 50%;
+      padding: 1.875rem;
+      .content--title{
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+      }
+      .content__question{
+        width: 80%;
+        border: none;
+        border-bottom: .0625rem solid $dividers;
+        .question--title{
+          font-size: 1rem;
+          font-weight: 400;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          margin: 1.25rem 0px;
+          color: $text-fs;
+          img{
+            transition: .3s;
+            transform: rotate(0deg);
+          }
+          &:hover{
+            color: $text-sc;
+          }
+        }
+        .question--text{
+          display: none;
+          font-size: $fs-text;
+          color: $text-fs;
+          line-height: 1.375rem;
+        }
+      }
+      .active{
+        .question--title{
+          font-weight: 700;
+          img{
+            transition: .3s;
+            transform: rotate(180deg);
+          }
+          
+        }
+        .question--text{
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  0%{
+    transform: translateY(5rem);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 68.75rem){
+  .container{
+    .container__faq{
+      width: 350px;
+      height: 650px;
+      flex-direction: column;
+      .faq__image{
+        width: 100%;
+        .image--overflow{
+          overflow: visible;
+          img{
+            left: 3.2rem;
+            top: -7rem;
+          }
+          .image--ills{
+            img{
+              width: 70%;
+              animation-name: fadeInUp;
+              animation-duration: 1s;
+            }
+            .image--bg{
+              img{
+                width: 70%;
+                top: 0;
+                left: 3.2rem;
+              }
+            }
+          }
+        }
+        .image--box{
+          display: none;
+        }
+      }
+      .faq__content{
+        width: 100%;
+        padding: 0;
+        
+        .content--title{
+          margin-top: 8.5rem;
+          text-align: center;
+        }
+        .content__question{
+          width: 90%;
+          margin: 0px auto;
+          .question--title{
+            font-size: .94rem;
+          }
+          .question--text{
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}

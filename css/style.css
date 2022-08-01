@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+body {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif; }
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #af67e9, #6565e7); }
+  .container .container__faq {
+    width: 62.5rem;
+    height: 35rem;
+    display: flex;
+    border-radius: 1.875rem;
+    background-color: white;
+    box-shadow: 0px 0.625rem 0.9375rem 0.625rem rgba(0, 0, 0, 0.3); }
+    .container .container__faq .faq__image {
+      width: 50%;
+      position: relative; }
+      .container .container__faq .faq__image .image--overflow {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden; }
+        .container .container__faq .faq__image .image--overflow img {
+          width: 100%;
+          position: absolute;
+          left: -4.5rem;
+          top: 15%; }
+          .container .container__faq .faq__image .image--overflow img::selection {
+            color: transparent;
+            background-color: transparent; }
+        .container .container__faq .faq__image .image--overflow .image--ills img {
+          z-index: 1;
+          animation-name: fadeInUp;
+          animation-duration: 1s; }
+        .container .container__faq .faq__image .image--overflow .image--ills .image--bg img {
+          width: 200%;
+          top: -45%;
+          left: -120%;
+          z-index: 0; }
+      .container .container__faq .faq__image .image--box {
+        width: 12.5rem;
+        position: absolute;
+        top: 38%;
+        left: -20%;
+        z-index: 10;
+        animation-name: fadeInUp;
+        animation-duration: 1s; }
+        .container .container__faq .faq__image .image--box::selection {
+          color: transparent;
+          background-color: transparent; }
+    .container .container__faq .faq__content {
+      width: 50%;
+      padding: 1.875rem; }
+      .container .container__faq .faq__content .content--title {
+        font-size: 2.5rem;
+        margin-bottom: 3rem; }
+      .container .container__faq .faq__content .content__question {
+        width: 80%;
+        border: none;
+        border-bottom: 0.0625rem solid #e7e7e9; }
+        .container .container__faq .faq__content .content__question .question--title {
+          font-size: 1rem;
+          font-weight: 400;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          margin: 1.25rem 0px;
+          color: #1d1e35; }
+          .container .container__faq .faq__content .content__question .question--title img {
+            transition: .3s;
+            transform: rotate(0deg); }
+          .container .container__faq .faq__content .content__question .question--title:hover {
+            color: #f47c57; }
+        .container .container__faq .faq__content .content__question .question--text {
+          display: none;
+          font-size: 0.875rem;
+          color: #1d1e35;
+          line-height: 1.375rem; }
+      .container .container__faq .faq__content .active .question--title {
+        font-weight: 700; }
+        .container .container__faq .faq__content .active .question--title img {
+          transition: .3s;
+          transform: rotate(180deg); }
+      .container .container__faq .faq__content .active .question--text {
+        display: block; }
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(5rem);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+@media only screen and (max-width: 68.75rem) {
+  .container .container__faq {
+    width: 350px;
+    height: 650px;
+    flex-direction: column; }
+    .container .container__faq .faq__image {
+      width: 100%; }
+      .container .container__faq .faq__image .image--overflow {
+        overflow: visible; }
+        .container .container__faq .faq__image .image--overflow img {
+          left: 3.2rem;
+          top: -7rem; }
+        .container .container__faq .faq__image .image--overflow .image--ills img {
+          width: 70%;
+          animation-name: fadeInUp;
+          animation-duration: 1s; }
+        .container .container__faq .faq__image .image--overflow .image--ills .image--bg img {
+          width: 70%;
+          top: 0;
+          left: 3.2rem; }
+      .container .container__faq .faq__image .image--box {
+        display: none; }
+    .container .container__faq .faq__content {
+      width: 100%;
+      padding: 0; }
+      .container .container__faq .faq__content .content--title {
+        margin-top: 8.5rem;
+        text-align: center; }
+      .container .container__faq .faq__content .content__question {
+        width: 90%;
+        margin: 0px auto; }
+        .container .container__faq .faq__content .content__question .question--title {
+          font-size: .94rem; }
+        .container .container__faq .faq__content .content__question .question--text {
+          width: 90%; } }
